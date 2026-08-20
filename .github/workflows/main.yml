@@ -16,5 +16,8 @@ jobs:
          run: echo "Update"
        - name: Checkout
          uses: actions/checkout@v7.0.1
+
+       - name: List Repository Files
+         run: ls -la
      
          
