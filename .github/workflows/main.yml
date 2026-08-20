@@ -11,5 +11,8 @@ jobs:
     steps:
        - name: Print a Walcome massage 
          run: echo "Welcome the First GitHub Action hi Salah" 
+
+       - name: Print Update
+         run: echo "Update"
      
          
