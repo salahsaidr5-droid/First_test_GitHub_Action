@@ -1,21 +1,13 @@
-name: First Workflow
+name: First WorkFlow
 
 on: 
- push:
-   branches: 
-         - main
-
+  push: 
+    branches: 
+     - mean
 jobs:
- example-jobs:
-    runs-on: ubuntu-latest
-    steps:
-       - name: Print a Walcome massage 
-         run: echo "Welcome the First GitHub Action hi Salah" 
+  ex-job:
+   runs-on: ubuntu-latest
 
-       - name: Print Update
-         run: echo "Update"
-
-       - name: List Repository Files
-         run: ls -la
-     
-         
+   steps:
+     - name: Print a Welcome massage
+       run: echo "Hi Salah How are you " 
