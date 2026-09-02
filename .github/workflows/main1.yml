@@ -13,4 +13,9 @@ jobs:
      steps:
         - name: Print message
           run: echo "Yes the Workflow "
-     
+
+        - name: Checkout
+          uses: actions/checkout@v7.0.1
+
+        - name: list all file
+          run: ls -al
