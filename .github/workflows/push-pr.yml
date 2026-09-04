@@ -1,0 +1,33 @@
+ # This workflow is triggered on push and pull request events to the main branch and any release branches.
+#  It runs tests on the codebase to ensure that changes do not break existing functionality.
+on:
+    push:
+        branches:
+            - main
+            - 'releases/*' 
+        paths:
+            - 'src/**'
+            - 'tests/**'
+            - '.github/workflows/push-pr.yml' 
+    pull_request:
+        branches:
+            - main
+            - 'releases/*' 
+        paths:
+            - 'src/**'
+            - 'tests/**'
+            - '.github/workflows/push-pr.yml'
+ 
+#Job definition
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+            
+            - name: Run tests
+              run : |
+                npm install
+                npm test
